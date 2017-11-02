@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
   def index
-    # render returns Lambda Proxy struture for web requests
-    render json: {a: "index"}, status: 200
+    posts = Post.scan # should not use scan for production
+    posts.each { |item| Jets.logger.info(item.inspect) }
+    render json: {posts: posts.items}, status: 200
+  end
+
+  def new
+    render json: {a: "new"}, status: 200
   end
 
   def show

@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+# Thanks: https://mutelight.org/bin-console
+
+require "irb"
+require "irb/completion"
+require "bundler/setup"
+Bundler.require(:default)
+
+Dir.glob("app/**/*").each do |path|
+  next unless File.file?(path)
+  require "#{Jets.root}#{path}"
+end
+
+IRB.start
