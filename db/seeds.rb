@@ -1,27 +1,30 @@
 # Example seed data for demo
 
-require 'aws-sdk-dynamodb'  # v2: require 'aws-sdk'
+def create_request(title)
+  id = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  {
+    put_request: {
+      item: {
+        "id" => id,
+        "title" => title,
+        "created_at" => Time.now.utc.strftime('%Y-%m-%dT%TZ'),
+        "updated_at" => Time.now.utc.strftime('%Y-%m-%dT%TZ'),
+      }
+    }
+  }
+end
 
-# Create dynamodb client
-dynamodb = Aws::DynamoDB::Client.new
+require "jets"
+Jets.boot
+db = Post.db
 
-dynamodb.batch_write_item({
+requests = []
+%w[tung vuon vanessa karissa alyssa].each do |name|
+  request = create_request(name)
+  requests << request
+end
+resp = db.batch_write_item(
   request_items: { # required
-    "TableName" => [
-      {
-        put_request: {
-          item: { # required
-            "AttributeName" => "value", # value <Hash,Array,String,Numeric,Boolean,IO,Set,nil>
-          },
-        },
-        delete_request: {
-          key: { # required
-            "AttributeName" => "value", # value <Hash,Array,String,Numeric,Boolean,IO,Set,nil>
-          },
-        },
-      },
-    ],
-  },
-  return_consumed_capacity: "INDEXES", # accepts INDEXES, TOTAL, NONE
-  return_item_collection_metrics: "SIZE", # accepts SIZE, NONE
-})
+    Post.table_name => requests
+  }
+)

@@ -9,4 +9,9 @@
 # table_namespace: stag
 # table_namespace: prod
 
-# table_namespace: prod
+development:
+  table_namespace: proj # do not include the env
+  endpoint: http://localhost:8000
+
+production:
+  table_namespace: proj # do not include the env

@@ -8,11 +8,20 @@ ENV['HOME'] = "spec/fixtures/home"
 require "pp"
 require "byebug"
 require "fileutils"
-require "bundler"
-Bundler.require(:default)
+
+require "jets"
+Jets.boot
+
+module Helpers
+  def payload(name)
+    JSON.load(IO.read("spec/fixtures/payloads/#{name}.json"))
+  end
+end
 
 RSpec.configure do |c|
   c.before(:suite) do
     Aws.config.update(stub_responses: true)
   end
+  c.include Helpers
 end
+

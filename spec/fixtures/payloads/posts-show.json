@@ -1,0 +1,53 @@
+{
+  "resource": "/posts/{id}",
+  "path": "/posts/myid",
+  "httpMethod": "GET",
+  "headers": {
+    "Accept": "*/*",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "US",
+    "Host": "g3zcsxp3fa.execute-api.us-east-1.amazonaws.com",
+    "User-Agent": "curl/7.54.0",
+    "Via": "1.1 9a77abddbf50889810fa780b533737c2.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "jj3tiI_3a1YfeTGHvcJSoIsMDUIOjQwknfbFOn0xw3htrkSrVsFCnQ==",
+    "X-Amzn-Trace-Id": "Root=1-59fb6042-326687e620ea6488070f5945",
+    "X-Forwarded-For": "69.42.1.180, 205.251.214.109",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "queryStringParameters": null,
+  "pathParameters": {
+    "id": "myid"
+  },
+  "stageVariables": null,
+  "requestContext": {
+    "path": "/dev/posts/myid",
+    "accountId": "160619113767",
+    "resourceId": "xkzdsq",
+    "stage": "dev",
+    "requestId": "83415c96-bff9-11e7-a31b-d16d2776bdf2",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "apiKey": "",
+      "sourceIp": "69.42.1.180",
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "curl/7.54.0",
+      "user": null
+    },
+    "resourcePath": "/posts/{id}",
+    "httpMethod": "GET",
+    "apiId": "g3zcsxp3fa"
+  },
+  "body": null,
+  "isBase64Encoded": false
+}
