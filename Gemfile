@@ -10,6 +10,6 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec'
-  gem 'sinatra'
   gem 'shotgun'
+  gem 'rack'
 end
