@@ -11,4 +11,5 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec'
   gem 'sinatra'
+  gem 'shotgun'
 end

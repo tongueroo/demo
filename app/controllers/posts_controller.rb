@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   def edit
     Jets.logger.info("event #{event.inspect}")
-    render json: {a: "edit", input: event}, status: 200
+    render json: {a: "edit1", input: event}, status: 200
   end
 
   def update
