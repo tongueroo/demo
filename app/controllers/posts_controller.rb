@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     posts = Post.scan # should not use scan for production
     Jets.logger.info("posts #{posts.inspect}")
     # posts.each { |item| Jets.logger.info(item.inspect) }
-    render json: {posts: posts.items}, status: 200
+    render json: {posts: posts.items, input: event}, status: 200
   end
 
   def new
@@ -13,7 +13,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    Jets.logger.info("event #{event.inspect}")
+    # Jets.logger.info("event #{event.inspect}")
+    post = Post.find(params[:id])
+    puts "params[:id] #{params[:id].inspect}"
+    puts "post #{post.inspect}"
     render json: {a: "show", input: event}, status: 200
   end
 

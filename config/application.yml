@@ -2,4 +2,3 @@
 level1:
   level2: test
 env_instance: 2
-env: production

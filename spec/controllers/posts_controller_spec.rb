@@ -7,13 +7,13 @@ RSpec.describe PostsController, type: :controller do
     event = payload("posts-index")
     controller = PostsController.new(event, context)
     response = controller.index
-    pp response
+    # pp response
   end
 
   it "show returns a success response" do
     event = payload("posts-show")
     controller = PostsController.new(event, context)
-    response = controller.index
-    pp response
+    response = controller.show
+    # pp response
   end
 end

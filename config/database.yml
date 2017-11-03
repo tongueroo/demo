@@ -10,8 +10,12 @@
 # table_namespace: prod
 
 development:
-  table_namespace: proj # do not include the env
+  # table_namespace: proj # do not include the env
+  endpoint: http://localhost:8000
+
+test:
+  # table_namespace: proj # do not include the env
   endpoint: http://localhost:8000
 
 production:
-  table_namespace: proj # do not include the env
+  # table_namespace: proj # do not include the env

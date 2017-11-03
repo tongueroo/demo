@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem "jets", git: "git@github.com:tongueroo/jets.git"
-# gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
+# gem "jets", git: "git@github.com:tongueroo/jets.git"
+gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -10,4 +10,5 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec'
+  gem 'sinatra'
 end

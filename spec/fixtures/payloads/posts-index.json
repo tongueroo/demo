@@ -1,6 +1,6 @@
 {
-  "resource": "/posts/{id}",
-  "path": "/posts/tung",
+  "resource": "/posts",
+  "path": "/posts",
   "httpMethod": "GET",
   "headers": {
     "Accept": "*/*",
@@ -12,24 +12,22 @@
     "CloudFront-Viewer-Country": "US",
     "Host": "qg45s7uvg2.execute-api.us-east-1.amazonaws.com",
     "User-Agent": "curl/7.54.0",
-    "Via": "1.1 dc553909528b8b63475c922dc07d8ba6.cloudfront.net (CloudFront)",
-    "X-Amz-Cf-Id": "s9NB2f_Z1scd6ksA4fcXA2r4QhpSKQ6QcTLQHGfxDPfI-X7sXM3YLg==",
-    "X-Amzn-Trace-Id": "Root=1-59fb8ecb-586ab81d73e36910793d767c",
-    "X-Forwarded-For": "69.42.1.180, 54.239.203.97",
+    "Via": "1.1 3d3d633d266d05d90a4eea7a6a59b514.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "4mAgowukJJbA7lgTWITzgOPmdiDsXPCwy6vonS8VKPXCdEsmldVgdg==",
+    "X-Amzn-Trace-Id": "Root=1-59fb8ea5-38c5ad176dac130f3eb9ce97",
+    "X-Forwarded-For": "69.42.1.180, 54.239.203.118",
     "X-Forwarded-Port": "443",
     "X-Forwarded-Proto": "https"
   },
   "queryStringParameters": null,
-  "pathParameters": {
-    "id": "tung"
-  },
+  "pathParameters": null,
   "stageVariables": null,
   "requestContext": {
-    "path": "/prod/posts/tung",
+    "path": "/prod/posts",
     "accountId": "160619113767",
-    "resourceId": "wf2gvu",
+    "resourceId": "ery965",
     "stage": "prod",
-    "requestId": "3feafb4e-c015-11e7-85c9-194f38f4c414",
+    "requestId": "292fbcc8-c015-11e7-94fa-cd109b693f3c",
     "identity": {
       "cognitoIdentityPoolId": null,
       "accountId": null,
@@ -44,7 +42,7 @@
       "userAgent": "curl/7.54.0",
       "user": null
     },
-    "resourcePath": "/posts/{id}",
+    "resourcePath": "/posts",
     "httpMethod": "GET",
     "apiId": "qg45s7uvg2"
   },
