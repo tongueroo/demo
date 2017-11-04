@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/tung/src/tongueroo/jets
+GIT
+  remote: git@github.com:tongueroo/jets.git
+  revision: db011b3a61cf353830e3a59bfc3df95b0b51f5d3
   specs:
     jets (0.2.0)
       actionview
