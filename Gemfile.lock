@@ -1,6 +1,11 @@
-GIT
-  remote: git@github.com:tongueroo/jets.git
-  revision: db011b3a61cf353830e3a59bfc3df95b0b51f5d3
+PATH
+  remote: /Users/tung/src/tongueroo/dynamodb_model
+  specs:
+    dynamodb_model (0.1.0)
+      activesupport
+
+PATH
+  remote: /Users/tung/src/tongueroo/jets
   specs:
     jets (0.2.0)
       actionview
@@ -124,6 +129,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara (~> 2.13)
+  dynamodb_model!
   jets!
   rack
   rspec

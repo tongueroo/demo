@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
-gem "jets", git: "git@github.com:tongueroo/jets.git"
-# gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
+# gem "jets", git: "git@github.com:tongueroo/jets.git"
+gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
+gem "dynamodb_model", path: "#{ENV['HOME']}/src/tongueroo/dynamodb_model"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
