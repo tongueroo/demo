@@ -1,42 +1,40 @@
 class PostsController < ApplicationController
   def index
-    Jets.logger.info("event #{event.inspect}")
     posts = Post.scan # should not use scan for production
-    Jets.logger.info("posts #{posts.inspect}")
-    # posts.each { |item| Jets.logger.info(item.inspect) }
-    render json: {posts: posts.items, input: event}, status: 200
+    render json: {action: "index", posts: posts.items}, status: 200
   end
 
   def new
-    Jets.logger.info("event #{event.inspect}")
-    render json: {a: "new", input: event}, status: 200
+    render json: {action: "new"}, status: 200
   end
 
   def show
-    # Jets.logger.info("event #{event.inspect}")
     post = Post.find(params[:id])
-    puts "params[:id] #{params[:id].inspect}"
-    puts "post #{post.inspect}"
-    render json: {a: "show", input: event}, status: 200
+    render json: {action: "show", post: post}, status: 200
   end
 
   def create
-    Jets.logger.info("event #{event.inspect}")
-    render json: {a: "create", input: event}, status: 200
+    attrs = {title: params[:title], desc: params[:desc]}
+    attrs[:id] = params[:id] if params[:id]
+    post = Post.new(attrs)
+    post.replace
+    render json: {action: "create", post: post}, status: 200
   end
 
   def edit
-    Jets.logger.info("event #{event.inspect}")
-    render json: {a: "edit1", input: event}, status: 200
+    post = Post.find(params[:id])
+    render json: {action: "edit", post: post}, status: 200
   end
 
   def update
-    Jets.logger.info("event #{event.inspect}")
-    render json: {a: "update", input: event}, status: 200
+    post = Post.find(params[:id])
+    post.attrs = {title: params[:title], desc: params[:desc]}
+    post.replace
+    render json: {action: "update", post: post}, status: 200
   end
 
   def delete
-    Jets.logger.info("event #{event.inspect}")
-    render json: {a: "delete", input: event}, status: 200
+    Post.delete(params[:id])
+    render json: {action: "delete"}, status: 200
   end
 end
