@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     posts = Post.scan # should not use scan for production
-    render json: {action: "index", posts: posts.items}, status: 200
+    render json: {action: "index", posts: posts}, status: 200
   end
 
   def new
