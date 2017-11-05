@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jets", git: "git@github.com:tongueroo/jets.git"
+gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
 # gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
 
 group :development, :test do

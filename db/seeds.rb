@@ -29,4 +29,4 @@ resp = db.batch_write_item(
   }
 )
 
-puts "Created some seed data for the posts table."
+puts "Seed data for the posts table created."
