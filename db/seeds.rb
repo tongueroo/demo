@@ -28,3 +28,5 @@ resp = db.batch_write_item(
     Post.table_name => requests
   }
 )
+
+puts "Created some seed data for the posts table."
