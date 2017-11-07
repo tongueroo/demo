@@ -6,6 +6,8 @@ class PostsController < ApplicationController
   end
 
   def new
+    puts "event: #{event.inspect}"
+    puts "context: #{context.inspect}"
     render json: {action: "new"}, status: 200
   end
 
