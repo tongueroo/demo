@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     # render json: {action: "index", posts: posts}, status: 200
 
     # render json: {"test": 1}
+
     render template: "posts/index"
   end
 
