@@ -17,6 +17,11 @@ if [[ "$os" == 'Darwin' ]]; then
   # macosx ruby for development
   exec jets "$@"
 else
+
+  # Total hack - there must be a better way to bundle up openssl and install it correctly.
+  # I've bundled the shared libraries like openssl into bundled/ruby/lib64
+  export LD_LIBRARY_PATH=$PROJECTDIR/bundled/ruby/lib64:$LD_LIBRARY_PATH
+
   # bundled ruby for Lambda
   exec "$PROJECTDIR/bundled/ruby/bin/ruby" -rbundler/setup "$PROJECTDIR/bundled/gems/ruby/2.4.0/bin/jets" "$@"
 fi
