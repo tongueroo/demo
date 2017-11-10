@@ -2,6 +2,5 @@
 *.gem
 .bundle
 coverage
-Gemfile.lock
 pkg
 tmp
