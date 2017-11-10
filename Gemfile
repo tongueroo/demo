@@ -5,6 +5,7 @@ if ENV['LOCAL_JETS_GEM']
 else
   gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
 end
+# gem "print_ruby_info"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
