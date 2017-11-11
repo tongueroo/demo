@@ -19,5 +19,5 @@ group :development, :test do
   gem 'rspec'
   gem 'shotgun'
   gem 'rack'
-  gem 'foreman'
+  # gem 'foreman' # foreman locks down to a thor version that doesnt match with jet's thor
 end
