@@ -4,9 +4,10 @@ class PostsController < ApplicationController
     # posts = Post.scan # should not use scan for production
     # render json: {action: "index", posts: posts}, status: 200
 
-    # render json: {"test": 1}
+    render json: {"test": 1}
 
-    render template: "posts/index"
+    # Disable until ruby 2.4
+    # render template: "posts/index"
   end
 
   def new
@@ -16,6 +17,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    raise "my kids"
     puts "Post.table_name #{Post.table_name.inspect}"
     puts "params #{params.inspect}"
     post = Post.find(params[:id])

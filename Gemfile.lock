@@ -1,11 +1,11 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: 46158c7d080a951ec133411d2b506929f922721f
+  revision: 7e9b471fad2e4c5d8706c42316230dbca40a5802
   branch: traveling-ruby
   submodules: true
   specs:
     jets (0.2.0)
-      actionpack
+      actionview
       activesupport
       aws-sdk-cloudformation
       aws-sdk-dynamodb
@@ -14,7 +14,6 @@ GIT
       colorize
       hashie
       kramdown
-      nokogiri (= 1.6.5)
       rack
       recursive-open-struct
       text-table
@@ -23,13 +22,6 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (5.1.4)
-      actionview (= 5.1.4)
-      activesupport (= 5.1.4)
-      rack (~> 2.0)
-      rack-test (>= 0.6.3)
-      rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.0.2)
     actionview (5.1.4)
       activesupport (= 5.1.4)
       builder (~> 3.1)
@@ -81,8 +73,6 @@ GEM
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     rack (2.0.3)
-    rack-test (0.7.0)
-      rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
