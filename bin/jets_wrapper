@@ -22,5 +22,5 @@ else
   export LD_LIBRARY_PATH=$PROJECTDIR/bundled/ruby/lib64:$LD_LIBRARY_PATH
 
   # bundled ruby for Lambda
-  exec "$PROJECTDIR/bundled/ruby/bin/ruby" -rbundler/setup "$PROJECTDIR/bundled/gems/ruby/2.4.0/bin/jets" "$@"
+  exec "$PROJECTDIR/bundled/ruby/bin/ruby" -rbundler/setup "$PROJECTDIR/bundled/gems/ruby/2.2.0/bin/jets" "$@"
 fi
