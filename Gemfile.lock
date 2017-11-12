@@ -1,7 +1,6 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: cc3b967948c154240ed335c13fc71645173738af
-  branch: traveling-ruby
+  revision: 5dcff156c442f0bfbfa96aa7dec6b17f7d24ae3a
   submodules: true
   specs:
     jets (0.2.0)
