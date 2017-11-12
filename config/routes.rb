@@ -1,7 +1,7 @@
 # resources :posts
 # resources :posts expands to:
-get "posts", to: "posts#index"
-# get "posts/new", to: "posts#new"
+# get "posts", to: "posts#index"
+get "posts/new", to: "posts#new"
 # get "posts/:id", to: "posts#show"
 # post "posts", to: "posts#create"
 # get "posts/:id/edit", to: "posts#edit"
