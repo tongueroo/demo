@@ -10,7 +10,6 @@ resources :posts
 
 any "comments/hot", to: "comments#hot"
 get "landing/posts", to: "posts#index"
-get "landing/comments", to: "comments#hot"
 
 get "admin/pages", to: "admin/pages#index"
 get "related_posts/:id", to: "related_posts#show"
