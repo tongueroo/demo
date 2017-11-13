@@ -4,7 +4,8 @@ class PostsController < ApplicationController
     # posts = Post.scan # should not use scan for production
     # render json: {action: "index", posts: posts}
 
-    render json: {"test": 1}
+    # render returns Lambda Proxy structure for web requests
+    render json: {hello: "world", action: "index"}
 
     # Disable until ruby 2.4
     # render template: "posts/index"
