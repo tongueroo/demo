@@ -15,13 +15,10 @@ class PostsController < ApplicationController
     puts "event: #{event.inspect}"
     puts "context: #{context.inspect}"
     puts "params #{params.inspect}"
-    render json: {action: "new"}
+    render json: params.merge(action: "new")
   end
 
   def show
-    raise "my kids"
-    puts "Post.table_name #{Post.table_name.inspect}"
-    puts "params #{params.inspect}"
     post = Post.find(params[:id])
     puts "post #{post.inspect}"
     render json: {action: "show", post: post}

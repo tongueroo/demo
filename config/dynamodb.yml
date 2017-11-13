@@ -4,7 +4,7 @@
 
 
 development:
-  # endpoint: http://localhost:8000
+  endpoint: http://localhost:8000
   table_namespace: <%= Jets.config.table_namespace %>
   # More examples:
   # table_namespace: dev
