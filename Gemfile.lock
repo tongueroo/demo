@@ -1,5 +1,8 @@
-PATH
-  remote: /Users/tung/src/tongueroo/jets
+GIT
+  remote: git@github.com:tongueroo/jets.git
+  revision: 30c5f13bc96581adf354e09dd51652b3527d9c59
+  branch: ruby24
+  submodules: true
   specs:
     jets (0.2.0)
       actionview
