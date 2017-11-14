@@ -5,10 +5,10 @@ class PostsController < ApplicationController
     # render json: {action: "index", posts: posts}
 
     # render returns Lambda Proxy structure for web requests
-    render json: {hello: "world", action: "index", ruby: RUBY_VERSION}
+    # render json: {hello: "world", action: "index", ruby: RUBY_VERSION}
 
-    # Disable until ruby 2.4
-    # render template: "posts/index"
+    # Demo of html template rendering
+    render template: "posts/index"
   end
 
   def new
