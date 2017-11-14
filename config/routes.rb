@@ -13,3 +13,6 @@ get "landing/posts", to: "posts#index"
 
 get "admin/pages", to: "admin/pages#index"
 get "related_posts/:id", to: "related_posts#show"
+
+# to demo ActiveRecord support
+resources :articles
