@@ -3,7 +3,7 @@ source "https://rubygems.org"
 if ENV['LOCAL_JETS_GEM']
   gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
 else
-  gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true, branch: "ruby24"
+  gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
 end
 
 group :development, :test do
