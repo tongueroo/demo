@@ -4,18 +4,10 @@
 
 unset LOCAL_JETS_GEM
 bundle update
-time jets deploy
 
-# grep '^gem "jets", git:' Gemfile
-# if [ $? -eq 0 ] ;then
-#   # echo "RIGHT: remote gem configured"
-#   bundle update
-#   # time jets deploy
-# else
-#   echo "WRONG: local gem configured"
-#   echo "You've got the jets gem configured to a local path."
-#   echo ""
-#   echo "1. cd jets ; git ci -m 'update jets' -a ; git push"
-#   echo "2. Update Gemfile to point to the remote git in this project"
-#   echo "3. bin/deploy again"
-# fi
+os=`uname`
+if [[ "$os" == 'Darwin' ]]; then
+  time jets deploy # possibly using hacked local version of jets
+else
+  time bundle exec jets deploy # required to use bundle exec on the server we're rsyncing to for now
+fi

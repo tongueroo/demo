@@ -8,7 +8,7 @@
 # put "posts/:id", to: "posts#update"
 # delete "posts/:id", to: "posts#delete"
 
-# any "comments/hot", to: "comments#hot"
+any "comments/hot", to: "comments#hot"
 # get "landing/posts", to: "posts#index"
 
 # get "admin/pages", to: "admin/pages#index"
