@@ -5,11 +5,6 @@ if ENV['LOCAL_JETS_GEM']
 else
   gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
 end
-# gem "print_ruby_info"
-
-# locking down for TravelingRuby for now
-gem "nokogiri", "1.6.5" # current: 1.8.1
-gem "mysql2", "0.3.18" # current: 0.4.9
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
