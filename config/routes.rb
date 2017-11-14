@@ -13,3 +13,4 @@
 
 # get "admin/pages", to: "admin/pages#index"
 # get "related_posts/:id", to: "related_posts#show"
+

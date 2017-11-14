@@ -15,7 +15,8 @@ def rsync_command
   # -z, --compress              compress file data during the transfer
   # -S, --sparse                handle sparse files efficiently
   # -v, --verbose               verbose
-  parent_dir = File.basename(File.expand_path("../../..", __FILE__))
+  # parent_dir = File.basename(File.expand_path("../../..", __FILE__))
+  parent_dir = "/var/task"
 
   excludes = rsync_excludes
   options = "--delete --numeric-ids --safe-links -axzSv #{excludes}"
@@ -26,7 +27,8 @@ def rsync_command
 end
 
 def rsync_excludes
-  excludes = %w[.git tmp log Gemfile.lock]
+  excludes = %w[.git tmp log]
+  excludes += %w[Gemfile.lock bundled] # specific for jets projects
   excludes += get_excludes('.gitignore')
   excludes += get_excludes('.dockerignore')
   excludes = excludes.uniq.map{|path| "--exclude='#{path}'"}.join(' ')
