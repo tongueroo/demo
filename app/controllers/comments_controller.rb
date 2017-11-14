@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   def hot
-    render json: {a: "hot"}
+    post = Post.find("tung")
+    render json: {a: "hot", ruby: RUBY_VERSION, post: post}
   end
 end

@@ -1,4 +1,4 @@
-resources :posts
+# resources :posts
 # resources :posts expands to:
 # get "posts", to: "posts#index"
 # get "posts/new", to: "posts#new"
@@ -8,8 +8,8 @@ resources :posts
 # put "posts/:id", to: "posts#update"
 # delete "posts/:id", to: "posts#delete"
 
-any "comments/hot", to: "comments#hot"
-get "landing/posts", to: "posts#index"
+# any "comments/hot", to: "comments#hot"
+# get "landing/posts", to: "posts#index"
 
-get "admin/pages", to: "admin/pages#index"
-get "related_posts/:id", to: "related_posts#show"
+# get "admin/pages", to: "admin/pages#index"
+# get "related_posts/:id", to: "related_posts#show"

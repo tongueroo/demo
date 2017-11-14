@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: 30c5f13bc96581adf354e09dd51652b3527d9c59
+  revision: 54a5c815c82342105eb713a0d9dc095c5c0f2c1f
   branch: ruby24
   submodules: true
   specs:
