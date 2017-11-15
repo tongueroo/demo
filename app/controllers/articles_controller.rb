@@ -22,16 +22,19 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
-    @article = Article.new(article_params)
+    puts "article_params #{article_params.inspect}"
+    puts "event #{event.inspect}"
+    render json: {action: "create", params: params}
+    # @article = Article.new(article_params)
 
-    if @article.save
-      redirect_to @article, notice: 'Article was successfully created.'
-    else
-      render :new
-    end
+    # if @article.save
+    #   redirect_to @article, notice: 'Article was successfully created.'
+    # else
+    #   render :new
+    # end
   end
 
-  # PATCH/PUT /articles/1
+  # PUT /articles/1
   def update
     if @article.update(article_params)
       redirect_to @article, notice: 'Article was successfully updated.'
@@ -41,19 +44,18 @@ class ArticlesController < ApplicationController
   end
 
   # DELETE /articles/1
-  def destroy
+  def delete
     @article.destroy
     redirect_to articles_url, notice: 'Article was successfully destroyed.'
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def article_params
-      params.require(:article).permit(:title, :body, :published)
-    end
+  def article_params
+    params[:article]
+  end
 end

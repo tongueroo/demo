@@ -55,9 +55,9 @@ end
 # puts "rsync_command #{rsync_command}"
 # puts "pattern #{pattern}"
 watch(pattern) do |md|
-  puts "*" * 30 + "Rsync started"
+  puts "*" * 30 + "Rsync started #{Time.now}"
   command = rsync_command
   puts "=> #{command}"
   system(command)
-  puts "*" * 30 + "Rsync completed"
+  puts "*" * 30 + "Rsync completed #{Time.now}"
 end
