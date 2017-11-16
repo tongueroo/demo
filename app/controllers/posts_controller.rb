@@ -12,10 +12,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    puts "event: #{event.inspect}"
-    puts "context: #{context.inspect}"
-    puts "params #{params.inspect}"
-    render json: params.merge(action: "new", event: event, context: context, params: params)
+    render json: params.merge(action: "new")
   end
 
   def show

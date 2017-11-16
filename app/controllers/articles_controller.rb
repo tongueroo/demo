@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
+    @article = Article.find(params[:id])
   end
 
   # GET /articles/new
@@ -18,20 +19,20 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    @article = Article.find(params[:id])
   end
 
   # POST /articles
   def create
     puts "article_params #{article_params.inspect}"
     puts "event #{event.inspect}"
-    render json: {action: "create", params: params, event: event}
-    # @article = Article.new(article_params)
+    @article = Article.new(article_params)
 
-    # if @article.save
-    #   redirect_to @article, notice: 'Article was successfully created.'
-    # else
-    #   render :new
-    # end
+    if @article.save
+      redirect_to "/articles/#{@article.id}"
+    else
+      render :new
+    end
   end
 
   # PUT /articles/1
