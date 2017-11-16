@@ -16,9 +16,9 @@
         <td><%= article.title %></td>
         <td><%= article.body %></td>
         <td><%= article.published %></td>
-        <td><%= link_to 'Show', "/articles/#{article.id}" %></td>
+        <td><%= link_to 'Show', :back %></td>
         <td><%= link_to 'Edit', "/articles/#{article.id}/edit" %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', "/articles/#{article.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
