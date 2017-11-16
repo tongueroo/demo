@@ -6,6 +6,9 @@ else
   gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
 end
 
+# gem "mysql2"
+gem "pg"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

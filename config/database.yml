@@ -1,15 +1,15 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   pool: <%= ENV["DB_POOL"] || 5  %>
   database: <%= ENV['DB_NAME'] || 'demo_dev' %>
-  username: <%= ENV['DB_USER'] || 'root' %>
+  username: <%= ENV['DB_USER'] || 'tung' %>
   password: <%= ENV['DB_PASS'] %>
   host: <%= ENV["DB_HOST"] %>
 
 development:
   <<: *default
-  database: demo_dev
+  url: "postgresql://deployuser:deployuser@test-db.ckm5uyz7uk58.us-east-1.rds.amazonaws.com/hello?pool=5"
 
 test:
   <<: *default
@@ -17,4 +17,5 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  # TODO: remove hardcode of test database url
+  url: "postgresql://deployuser:deployuser@test-db.ckm5uyz7uk58.us-east-1.rds.amazonaws.com/hello?pool=5"

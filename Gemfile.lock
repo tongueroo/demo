@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: 42d5484aa336c6d23f512856d81ce46eafd8c80b
+  revision: 899c72a940f5c2b1781871991a2a8aaf3d221473
   submodules: true
   specs:
     jets (0.2.0)
@@ -91,6 +91,7 @@ GEM
     minitest (5.10.3)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    pg (0.21.0)
     rack (2.0.3)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -105,7 +106,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (12.2.1)
+    rake (12.3.0)
     recursive-open-struct (1.0.5)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
@@ -134,6 +135,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   jets!
+  pg
   rack
   rspec
   shotgun

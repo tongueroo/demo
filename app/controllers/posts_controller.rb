@@ -25,11 +25,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    attrs = {title: params[:title], desc: params[:desc]}
-    attrs[:id] = params[:id] if params[:id]
-    post = Post.new(attrs)
-    post.replace
-    render json: {action: "create", post: post}
+    render json: {action: "create", event: event}
+    # attrs = {title: params[:title], desc: params[:desc]}
+    # attrs[:id] = params[:id] if params[:id]
+    # post = Post.new(attrs)
+    # post.replace
+    # render json: {action: "create", post: post}
   end
 
   def edit
