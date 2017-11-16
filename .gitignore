@@ -6,3 +6,4 @@ pkg
 tmp
 bundled
 .byebug_history
+.env

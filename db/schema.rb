@@ -12,10 +12,17 @@
 
 ActiveRecord::Schema.define(version: 20171114235317) do
 
-  create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.boolean "published"
+  end
+
+  create_table "films", id: false, force: :cascade do |t|
+    t.string "title", limit: 40, null: false
   end
 
 end
