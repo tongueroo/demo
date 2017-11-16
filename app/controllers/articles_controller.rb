@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
   def create
     puts "article_params #{article_params.inspect}"
     puts "event #{event.inspect}"
-    render json: {action: "create", params: params}
+    render json: {action: "create", params: params, event: event}
     # @article = Article.new(article_params)
 
     # if @article.save
