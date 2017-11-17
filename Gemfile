@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-if ENV['LOCAL_JETS_GEM']
+if ENV['DEV=1']
   gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
 else
   gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true

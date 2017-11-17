@@ -3,6 +3,6 @@
 # export DYNAMODB_ENDPOINT=http://localhost:8000
 
 # Hacky wrapper so we dont forget to switch to local gems for quick development
-export LOCAL_JETS_GEM=1
+export DEV=1=1
 bundle update
 exec bundle exec jets server

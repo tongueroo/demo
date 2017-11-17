@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    puts "event: #{event.inspect}".colorize(:cyan)
     render json: {action: "create", event: event}
     # attrs = {title: params[:title], desc: params[:desc]}
     # attrs[:id] = params[:id] if params[:id]

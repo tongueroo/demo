@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :delete]
+  before_action :log_event
   layout :application
 
   # GET /articles
@@ -45,7 +46,11 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def delete
     @article.destroy
-    redirect_to "/articles"
+    if request.xhr?
+      render json: {success: true}
+    else
+      redirect_to "/articles"
+    end
   end
 
 private
@@ -56,5 +61,11 @@ private
 
   def article_params
     params[:article]
+  end
+
+  def log_event
+    puts "event: #{event.inspect}"
+    pp event
+    true
   end
 end
