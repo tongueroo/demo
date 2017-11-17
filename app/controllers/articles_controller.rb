@@ -38,7 +38,7 @@ class ArticlesController < ApplicationController
   # PUT /articles/1
   def update
     if @article.update(article_params)
-      redirect_to @article, notice: 'Article was successfully updated.'
+      redirect_to "/articles/#{@article.id}"
     else
       render :edit
     end
@@ -47,7 +47,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def delete
     @article.destroy
-    redirect_to articles_url, notice: 'Article was successfully destroyed.'
+    redirect_to "/articles"
   end
 
 private

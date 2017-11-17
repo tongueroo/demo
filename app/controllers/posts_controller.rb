@@ -8,11 +8,12 @@ class PostsController < ApplicationController
     # render json: {hello: "world", action: "index", ruby: RUBY_VERSION}
 
     # Demo of html template rendering
+    puts "event #{event.inspect}"
     render template: "posts/index"
   end
 
   def new
-    render json: params.merge(action: "new")
+    render json: params.merge(action: "new", event: event)
   end
 
   def show
