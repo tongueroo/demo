@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    render json: params.merge(action: "new", event: event)
+    render json: params.merge(action: "new")
   end
 
   def show

@@ -9,11 +9,15 @@ default: &default
 
 development:
   <<: *default
-  url: "postgresql://deployuser:deployuser@test-db.ckm5uyz7uk58.us-east-1.rds.amazonaws.com/hello?pool=5"
+  database: demo_dev
 
 test:
   <<: *default
   database: demo_test
+
+staging:
+  <<: *default
+  url: "postgresql://deployuser:deployuser@test-db.ckm5uyz7uk58.us-east-1.rds.amazonaws.com/hello?pool=5"
 
 production:
   <<: *default
