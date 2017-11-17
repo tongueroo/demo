@@ -2,7 +2,7 @@
 
 # Hacky wrapper script so I do not forget to update the jets remote gem
 
-unset DEV=1
+unset DEV
 bundle update
 
 export JETS_ENV=staging
