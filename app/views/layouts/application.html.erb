@@ -6,55 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demo Jets App</title>
 
-  <%# TODO: Get webpack integrated and handle this is separate application.s file. Hacked in js.  %>
-  <%# stylesheet_link_tag 'application', media: 'all' %>
-  <%# javascript_include_tag 'application' %>
   <%= javascript_include_tag "https://code.jquery.com/jquery-3.2.1.min.js", integrity: "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",
   crossorigin: "anonymous" %>
-  <%= javascript_tag defer: 'defer' do -%>
-
-$(function() {
-  function handler(e) {
-    var link = $(e.target);
-    if (link.hasClass("jets-delete")) {
-      event.preventDefault();
-      var message = link.data("confirm");
-      if (message) {
-        var sure = confirm(message);
-        if (sure) {
-          deleteItem(link);
-        } else {
-          console.log("Deletion cancelled");
-        }
-      }
-    }
-  }
-
-  function deleteItem(link) {
-    var node = link.closest('.jets-delete-element');
-    node.hide(); // immediately hide element
-
-    var resource = link.attr("href");
-    var request = $.ajax({
-      url: resource,
-      method: "DELETE",
-      dataType: "json"
-    });
-
-    request.done(function(msg) {
-      node.remove();
-    });
-
-    request.fail(function(jqXHR, textStatus) {
-      node.show(); // in the event of a failure re-display the node
-    });
-  }
-
-  $('body').click(handler)
-});
-
-
-  <% end -%>
+  <%= javascript_pack_tag 'application' %>
+  <%= stylesheet_pack_tag 'application' %>
 </head>
 <body>
 
