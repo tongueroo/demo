@@ -65,7 +65,6 @@ private
 
   def log_event
     puts "event: #{event.inspect}"
-    pp event
     true
   end
 end
