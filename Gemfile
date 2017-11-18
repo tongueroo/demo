@@ -8,7 +8,7 @@ end
 
 # gem "mysql2"
 gem "pg"
-gem "webpacker", path: "#{ENV['HOME']}/src/tongueroo/webpacker"
+gem "webpacker", github: "tongueroo/webpacker"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

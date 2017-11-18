@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/tongueroo/webpacker.git
+  revision: 7115ae4ce95d9dd8cdd4b32cc40736c25548a29d
+  specs:
+    webpacker (3.0.2)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
+
 PATH
   remote: /Users/tung/src/tongueroo/jets
   specs:
@@ -19,14 +28,6 @@ PATH
       recursive-open-struct
       text-table
       thor
-
-PATH
-  remote: /Users/tung/src/tongueroo/webpacker
-  specs:
-    webpacker (3.0.2)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
 
 GEM
   remote: https://rubygems.org/
