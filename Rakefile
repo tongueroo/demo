@@ -1,3 +1,3 @@
 require 'jets'
 
-Jets::Db::Tasks.load!
+Jets::RakeTasks.load!
