@@ -1,7 +1,14 @@
 GIT
-  remote: git@github.com:tongueroo/jets.git
-  revision: 1111785372104bed5197c8df950dba006067958d
-  submodules: true
+  remote: git@github.com:tongueroo/webpacker.git
+  revision: 7533a9ef9fa66c75cb470b1108081da415536727
+  specs:
+    webpacker (3.0.2)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
+
+PATH
+  remote: /Users/tung/src/tongueroo/jets
   specs:
     jets (0.2.0)
       actionpack
@@ -21,15 +28,6 @@ GIT
       recursive-open-struct
       text-table
       thor
-
-GIT
-  remote: git@github.com:tongueroo/webpacker.git
-  revision: 7533a9ef9fa66c75cb470b1108081da415536727
-  specs:
-    webpacker (3.0.2)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -63,7 +61,7 @@ GEM
     aws-sdk-cloudformation (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-core (3.7.0)
+    aws-sdk-core (3.8.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
