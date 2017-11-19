@@ -1,9 +1,8 @@
 class PublicFilesController < ApplicationController
   def show
-    puts "event #{event.inspect}"
-    # render json: {action: "catchall", event: event}
     path = Jets.root + "public" + params[:catchall]
     if path.exist?
+      # TODO: only works for text files. Add support for binary data like images
       render file: path
     else
       render status: 404

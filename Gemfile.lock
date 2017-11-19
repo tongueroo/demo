@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: 79d42e257196d595d6b916705ec3b973f26f24ab
+  revision: 560b5da1875269ba71825f37322e5bee86e94dbe
   submodules: true
   specs:
     jets (0.2.0)
@@ -106,7 +106,7 @@ GEM
     rack (2.0.3)
     rack-proxy (0.6.2)
       rack
-    rack-test (0.7.0)
+    rack-test (0.7.1)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
