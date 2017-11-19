@@ -2,10 +2,12 @@
 
 # Hacky wrapper script so I do not forget to update the jets remote gem
 
-unset DEV
+rm -f "tmp/dev.mode"
 bundle update
 
 export JETS_ENV=staging
+
+bin/webpack
 
 os=`uname`
 if [[ "$os" == 'Darwin' ]]; then

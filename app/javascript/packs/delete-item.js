@@ -16,7 +16,7 @@ $(function() {
   }
 
   function deleteItem(link) {
-    var node = link.closest('.jets-delete-element');
+    var node = link.closest('.jets-element-to-delete');
     node.hide(); // immediately hide element
 
     var resource = link.attr("href");

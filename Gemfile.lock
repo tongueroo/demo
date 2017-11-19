@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: 3b11cc09d8b1c39c89470858e72d7598f4c947ba
+  revision: 1111785372104bed5197c8df950dba006067958d
   submodules: true
   specs:
     jets (0.2.0)
@@ -24,7 +24,7 @@ GIT
 
 GIT
   remote: git@github.com:tongueroo/webpacker.git
-  revision: 7115ae4ce95d9dd8cdd4b32cc40736c25548a29d
+  revision: 7533a9ef9fa66c75cb470b1108081da415536727
   specs:
     webpacker (3.0.2)
       activesupport (>= 4.2)
