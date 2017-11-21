@@ -1,4 +1,7 @@
 class StoresController < ApplicationController
+  class_properties(memory_size: 768)
+  class_env(my_test: "data")
+
   # timeout 30
   properties(dead_letter_config: "arn", timeout: 20, role: "myrole", memory_size: 1000)
   def index
