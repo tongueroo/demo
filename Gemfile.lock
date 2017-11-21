@@ -1,14 +1,7 @@
 GIT
-  remote: git@github.com:tongueroo/webpacker.git
-  revision: 7533a9ef9fa66c75cb470b1108081da415536727
-  specs:
-    webpacker (3.0.2)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
-
-PATH
-  remote: /Users/tung/src/tongueroo/jets
+  remote: git@github.com:tongueroo/jets.git
+  revision: dee56b9cbf998a797e301d9d0c00d64d7dd409e6
+  submodules: true
   specs:
     jets (0.2.0)
       actionpack
@@ -28,6 +21,15 @@ PATH
       recursive-open-struct
       text-table
       thor
+
+GIT
+  remote: git@github.com:tongueroo/webpacker.git
+  revision: 7533a9ef9fa66c75cb470b1108081da415536727
+  specs:
+    webpacker (3.0.2)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -57,11 +59,11 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
-    aws-partitions (1.36.0)
+    aws-partitions (1.37.0)
     aws-sdk-cloudformation (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-core (3.8.0)
+    aws-sdk-core (3.9.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
@@ -85,6 +87,7 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     diff-lcs (1.3)
+    dotenv (2.2.1)
     erubi (1.7.0)
     hashie (3.5.6)
     i18n (0.9.1)
@@ -145,6 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  dotenv
   jets!
   pg
   rack
