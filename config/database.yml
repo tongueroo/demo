@@ -17,9 +17,9 @@ test:
 
 staging:
   <<: *default
-  url: "postgresql://deployuser:deployuser@test-db.ckm5uyz7uk58.us-east-1.rds.amazonaws.com/hello?pool=5"
+  url: <%= ENV['DB_URL'] %>
 
 production:
   <<: *default
   # TODO: remove hardcode of test database url
-  url: "postgresql://deployuser:deployuser@test-db.ckm5uyz7uk58.us-east-1.rds.amazonaws.com/hello?pool=5"
+  url: <%= ENV['DB_URL'] %>
