@@ -16,8 +16,11 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   # gem 'capybara', '~> 2.13'
   # gem 'selenium-webdriver'
-  gem 'rspec'
   gem 'shotgun'
   gem 'rack'
   # gem 'foreman' # foreman locks down to a thor version that doesnt match with jet's thor
+end
+
+group :test do
+  gem 'rspec'
 end
