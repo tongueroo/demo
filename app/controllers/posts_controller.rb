@@ -4,15 +4,8 @@ class PostsController < ApplicationController
   timeout 18
   def index
     # puts "Post.table_name #{Post.table_name.inspect}"
-    # posts = Post.scan # should not use scan for production
-    # render json: {action: "index", posts: posts}
-
-    # render returns Lambda Proxy structure for web requests
-    # render json: {hello: "world", action: "index", ruby: RUBY_VERSION}
-
-    # Demo of html template rendering
-    puts "event #{event.inspect}"
-    render template: "posts/index"
+    posts = Post.scan # should not use scan for production
+    render json: {action: "index", posts: posts}
   end
 
   def new
@@ -41,7 +34,7 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.attrs = {title: params[:title], desc: params[:desc]}
+    post.attrs(title: params[:title], desc: params[:desc])
     post.replace
     render json: {action: "update", post: post}
   end
