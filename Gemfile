@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-if File.exist?("tmp/dev.mode")
+if File.exist?("dev.mode")
   gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
 else
   gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
@@ -9,7 +9,6 @@ end
 # gem "mysql2"
 gem "pg"
 gem "webpacker", git: "git@github.com:tongueroo/webpacker.git"
-gem "dotenv"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
