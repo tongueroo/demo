@@ -14,7 +14,7 @@ unset BUNDLE_IGNORE_CONFIG
 os=$(uname)
 if [[ "$os" == 'Darwin' ]]; then
   # macosx ruby for development
-  exec jets "$@"
+  exec bundle exec jets "$@"
 else
 
   # bundled openssl into bundled/ruby
