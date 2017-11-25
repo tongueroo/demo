@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: d6f63f4db6a42d2cbab18d3515d172c265130437
+  revision: a20b5421257e15e20a54ca6cb24d9a9b6146b0f4
   submodules: true
   specs:
     jets (0.2.0)
