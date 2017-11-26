@@ -2,4 +2,4 @@
 
 require "jets"
 Jets.boot
-run Jets::Application
+run Jets.application
