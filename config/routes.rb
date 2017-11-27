@@ -1,4 +1,5 @@
 Jets.application.routes.draw do
+  resources :toys
   resources :posts
   # resources :posts expands to:
   # get "posts", to: "posts#index"
