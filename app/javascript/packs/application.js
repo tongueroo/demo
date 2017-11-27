@@ -9,3 +9,4 @@
 
 import '../src/application'
 import './delete-item'
+console.log('Hello World from Webpacker')

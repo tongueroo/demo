@@ -1,4 +1,6 @@
 class StoresController < ApplicationController
+  layout false # for specs to pass
+
   class_properties(memory_size: 768)
   class_env(my_test: "data")
 
