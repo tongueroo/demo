@@ -1,7 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :delete]
-  before_action :log_event
-  layout :application
 
   # GET /articles
   def index
@@ -23,8 +21,6 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
-    puts "article_params #{article_params.inspect}"
-    puts "event #{event.inspect}"
     @article = Article.new(article_params)
 
     if @article.save
@@ -61,9 +57,5 @@ private
 
   def article_params
     params[:article]
-  end
-
-  def log_event
-    puts "event: #{event.inspect}"
   end
 end
