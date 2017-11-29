@@ -1,2 +1,2 @@
 require 'jets'
-Jets::RakeTasks.load!
+Jets.load_tasks
