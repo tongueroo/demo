@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:tongueroo/jets.git
-  revision: d39ef3cbb04a704774ae61aa20074e55ee6bad7b
+  revision: a1ba496502188aaef9dcca46aa82cc6902214c21
   submodules: true
   specs:
     jets (0.2.0)
@@ -59,7 +59,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
-    aws-partitions (1.42.0)
+    aws-partitions (1.44.0)
     aws-sdk-cloudformation (1.3.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
@@ -73,7 +73,7 @@ GEM
     aws-sdk-kms (1.3.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-lambda (1.1.0)
+    aws-sdk-lambda (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-s3 (1.8.0)
