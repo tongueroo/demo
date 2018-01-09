@@ -6,8 +6,7 @@ else
   gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
 end
 
-#gem "webpacker", git: "git@github.com:tongueroo/webpacker.git", branch: "jets"
-gem "webpacker", path: "#{ENV['HOME']}/src/tongueroo/webpacker"
+gem "webpacker", git: "git@github.com:tongueroo/webpacker.git", branch: "jets"
 gem "pg"
 # gem "mysql2"
 
