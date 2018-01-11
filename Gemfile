@@ -7,7 +7,9 @@ else
 end
 
 gem "webpacker", git: "git@github.com:tongueroo/webpacker.git", branch: "jets"
-gem "pg"
+# gem "pg"
+gem "pg", '~> 0.21'
+
 # gem "mysql2"
 
 group :development, :test do
