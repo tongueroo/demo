@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   def show
     post = Post.find(params[:id])
-    puts "post #{post.inspect}"
+    # puts "post #{post.inspect}"
     render json: {action: "show", post: post}
   end
 
