@@ -3,10 +3,10 @@ source "https://rubygems.org"
 if File.exist?("dev.mode")
   gem "jets", path: "#{ENV['HOME']}/src/tongueroo/jets"
 else
-  gem "jets", git: "git@github.com:tongueroo/jets.git", submodules: true
+  gem "jets", git: "https://github.com/tongueroo/jets.git", submodules: true
 end
 
-gem "webpacker", git: "git@github.com:tongueroo/webpacker.git", branch: "jets"
+gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
 # gem "pg"
 gem "pg", '~> 0.21'
 
