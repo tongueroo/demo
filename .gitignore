@@ -6,7 +6,6 @@ pkg
 tmp
 bundled
 .byebug_history
-.env
 /public/packs
 /public/packs-test
 /node_modules
