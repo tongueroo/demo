@@ -4,7 +4,7 @@ Jets.application.configure do
   # config.extra_autoload_paths = []
 
   config.function.timeout = 10
-  # config.function.memory_size = 1536
+  # config.function.memory_size= 3008
   # config.function.cors = true
   config.function.environment = {
     global_app_key1: "global_app_value1",
