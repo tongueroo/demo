@@ -1,5 +1,6 @@
-from pprint import pprint
+import pprint
 import json
+import sys
 
 def response(message, status_code):
     return {
@@ -12,12 +13,11 @@ def response(message, status_code):
         }
 
 def handle(event, context):
-    print("BooksController#show")
-    pprint(event)
+    # TODO: figure out why this does not print out to stderr with python 3
+    # print("BooksController#show", file=sys.stderr)
+    # print(pprint.pformat(event), file=sys.stderr))
 
     try:
-        # print("value1 = " + event['key1'])
-        # print("value2 = " + event['key2'])
         return response({'message': 'Big Thumbs up'}, 200)
     except Exception as e:
         return response({'message': e.message}, 400)
