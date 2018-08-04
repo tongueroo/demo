@@ -63,7 +63,7 @@ end
 #     "logGroupName": "/aws/lambda/demo-dev-2-posts-controller-new",
 #     "logStreamName": "2017/11/07/[$LATEST]3cefcb18a8bc49acbfb3f29907a36391",
 #     "functionName": "demo-dev-2-posts-controller-new",
-#     "memoryLimitInMB": "1536",
+#     "memoryLimitInMB": "3008",
 #     "functionVersion": "$LATEST",
 #     "invokeid": "cd68b58a-c379-11e7-bab1-855c4fa0d379",
 #     "awsRequestId": "cd68b58a-c379-11e7-bab1-855c4fa0d379",
