@@ -11,6 +11,6 @@ exports.handle = async function(event, context) {
       body: JSON.stringify(body)
     };
     return(response);
-   // or 
-   // throw new Error(“some error type”); 
-}  
+   // or
+   // throw new Error(“some error type”);
+}
