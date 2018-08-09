@@ -12,3 +12,9 @@ exports.handle = function(event, context, callback) {
     };
     callback(null, response);
 };
+
+// if (require.main === module) {
+//     console.log('called directly');
+// } else {
+//     console.log('required as a module');
+// }
