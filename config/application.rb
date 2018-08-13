@@ -3,6 +3,11 @@ Jets.application.configure do
   # config.env_extra = 2
   # config.extra_autoload_paths = []
 
+  config.lambdagems.sources = [
+    'https://s3.amazonaws.com/lambdagems',
+    'https://s3.amazonaws.com/lambdagems-test',
+  ]
+
   config.function.timeout = 10
   # config.function.memory_size= 3008
   # config.function.cors = true
