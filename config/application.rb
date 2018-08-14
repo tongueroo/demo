@@ -5,7 +5,7 @@ Jets.application.configure do
 
   config.lambdagems.sources = [
     'https://lambdagems.com',
-    'https://lambdagems.com-test',
+    'https://s3.amazonaws.com/lambdagems-test',
   ]
 
   config.function.timeout = 10
