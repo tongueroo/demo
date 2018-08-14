@@ -4,8 +4,9 @@ Jets.application.configure do
   # config.extra_autoload_paths = []
 
   config.lambdagems.sources = [
-    'https://lambdagems.com',
-    'https://s3.amazonaws.com/lambdagems-test',
+    'https://gems.lambdagems.com',
+    'https://gems.test.lambdagems.com',
+    # 'https://s3.amazonaws.com/another-bucket',
   ]
 
   config.function.timeout = 10
