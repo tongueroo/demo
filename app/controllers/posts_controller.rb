@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   class_timeout 22
+  class_iam_policy("lambda:*", "logs:*")
 
   timeout 18
   def index
@@ -8,7 +9,7 @@ class PostsController < ApplicationController
     render json: {action: "index", posts: posts}
   end
 
-  iam_policy("ec2:*")
+  iam_policy("lambda:*", "ec2:*")
   def new
     render json: params.merge(action: "new")
   end
