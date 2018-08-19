@@ -8,6 +8,7 @@ class PostsController < ApplicationController
     render json: {action: "index", posts: posts}
   end
 
+  iam_policy("ec2:*")
   def new
     render json: params.merge(action: "new")
   end
