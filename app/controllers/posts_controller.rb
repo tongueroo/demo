@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     render json: params.merge(action: "new")
   end
 
+  managed_iam_policy "AmazonEC2ReadOnlyAccess"
   def show
     post = Post.find(params[:id])
     # puts "post #{post.inspect}"
