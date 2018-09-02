@@ -19,6 +19,7 @@ class GameRule < Jets::Rule::Base
   #     "Owner" => "String", # CUSTOM_LAMBDA | AWS
   #   }
   # )
+  scope "AWS::EC2::SecurityGroup"
   def protect
     puts "event #{event.inspect}"
   end
