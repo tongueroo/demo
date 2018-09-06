@@ -68,7 +68,7 @@ end
 #     "invokeid": "cd68b58a-c379-11e7-bab1-855c4fa0d379",
 #     "awsRequestId": "cd68b58a-c379-11e7-bab1-855c4fa0d379",
 #     "invokedFunctionArn":
-#     "arn:aws:lambda:us-east-1:160619113767:function:demo-dev-2-posts-controller-new"
+#     "arn:aws:lambda:us-east-1:123456789012:function:demo-dev-2-posts-controller-new"
 #   }
 #
 # For more info: http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
