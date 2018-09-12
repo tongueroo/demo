@@ -7,6 +7,7 @@ class StoresController < ApplicationController
   # timeout 30
   properties(timeout: 20, memory_size: 1000)
   def index
+    response.headers["Set-Cookie"] = "foo=bar"
   end
 
   timeout 35
