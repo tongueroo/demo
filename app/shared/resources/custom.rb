@@ -1,8 +1,8 @@
 class Custom < Jets::Stack
-  resource(:hello,
+  resource(:howdy,
     type: "AWS::Lambda::Function",
     properties: {
-      function_name: "hello",
+      function_name: "howdy",
       code: {
         s3_bucket: "!Ref S3Bucket",
         s3_key: code_s3_key
