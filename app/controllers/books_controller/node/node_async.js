@@ -12,5 +12,5 @@ exports.handle = async function(event, context) {
     };
     return(response);
    // or
-   // throw new Error(“some error type”);
+   // throw new Error("some error type”);
 }

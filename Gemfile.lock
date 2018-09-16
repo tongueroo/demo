@@ -11,12 +11,13 @@ GIT
 PATH
   remote: /home/ec2-user/environment/jets
   specs:
-    jets (0.5.8)
-      actionpack
-      actionview
-      activerecord
-      activesupport
+    jets (0.8.15)
+      actionpack (>= 5.2.1)
+      actionview (>= 5.2.1)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
       aws-sdk-cloudformation
+      aws-sdk-cloudwatchlogs
       aws-sdk-dynamodb
       aws-sdk-lambda
       aws-sdk-s3
@@ -27,9 +28,9 @@ PATH
       json
       kramdown
       memoist
-      pg (= 0.21)
+      mimemagic
       rack
-      railties
+      railties (>= 5.2.1)
       recursive-open-struct
       text-table
       thor
@@ -63,26 +64,29 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     aws-eventstream (1.0.1)
-    aws-partitions (1.100.0)
-    aws-sdk-cloudformation (1.6.0)
-      aws-sdk-core (~> 3)
+    aws-partitions (1.104.0)
+    aws-sdk-cloudformation (1.8.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-core (3.24.1)
+    aws-sdk-cloudwatchlogs (1.8.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-core (3.27.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-dynamodb (1.10.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-dynamodb (1.13.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-kms (1.7.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-kms (1.9.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-lambda (1.8.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-lambda (1.10.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.17.0)
-      aws-sdk-core (~> 3, >= 3.21.2)
+    aws-sdk-s3 (1.19.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.3)
@@ -107,6 +111,7 @@ GEM
       nokogiri (>= 1.5.9)
     memoist (0.16.0)
     method_source (0.9.0)
+    mimemagic (0.3.2)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     nokogiri (1.8.4)
