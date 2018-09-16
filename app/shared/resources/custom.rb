@@ -8,7 +8,7 @@ class Custom < Jets::Stack
         s3_key: code_s3_key
       },
       description: "Hello world",
-      handler: handler("hello.lambda_handler"),
+      handler: handler("howdy.lambda_handler"),
       memory_size: 128,
       role: "!Ref IamRole",
       runtime: "python3.6",
